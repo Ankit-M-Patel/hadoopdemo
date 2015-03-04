@@ -22,6 +22,10 @@ public class MyDriver {
 		job.setMapperClass(MyMapper.class);
 		job.setReducerClass(MyReducer.class);
 		
+		
+		job.setMapOutputKeyClass(Text.class);
+		job.setMapOutputValueClass(Text.class);
+		
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(Text.class);
 		
