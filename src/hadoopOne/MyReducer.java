@@ -32,8 +32,6 @@ public class MyReducer extends Reducer<Text, Text, Text, Text>{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
 	}
 }
 

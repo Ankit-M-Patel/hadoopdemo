@@ -21,30 +21,7 @@ public class MyMapper extends Mapper<LongWritable, Text, Text, Text> {
 		@Override
 		public void map(LongWritable key, Text value, Context context) throws IOException,InterruptedException {
 			System.out.println("**************In Mapper ***********");
-			/*
-			String line = value.toString();
-			Matcher m = p.matcher(value.toString());
-			StringTokenizer tokenizer = new StringTokenizer(line);
-			while (tokenizer.hasMoreTokens()) {				
-				word.set(tokenizer.nextToken());
-				try {
-					FileSplit fileSplit = ((FileSplit) context.getInputSplit());									
-					
-					StringBuilder fileName = new StringBuilder(fileSplit.getPath().getName());
-					fileName.append("@");
-					
-					fileName.append(key.toString());					
-					res.set(fileName.toString());		
-					
-				
-					context.write(word,new Text(res));
-					
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			*/
+			
 			Pattern p = Pattern.compile("\\w+");
 			Matcher m = p.matcher(value.toString());
 
